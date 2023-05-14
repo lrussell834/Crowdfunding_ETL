@@ -1,0 +1,35 @@
+# Physical
+
+Categories
+-
+category_id INT PK 
+category VARCHAR(30)
+
+Subcategories
+-
+subcategory_id INT PK 
+subcategory VARCHAR(30)
+
+Campaign
+-
+cf_id INT PK
+contact_id INT
+company_name VARCHAR(30)
+description VARCHAR(30)
+goal INT
+pledged INT
+outcome VARCHAR(30)
+backers_count INT
+country VARCHAR(30)
+currency VARCHAR(30)
+launched_date DATE
+end_date DATE
+category_id INT FK - Categories.category_id
+subcategory_id INT FK - Subcategories.subcategory_id
+
+Contacts
+-
+contact_id INT PK FK - Campaign.contact_id
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+email VARCHAR(30)
