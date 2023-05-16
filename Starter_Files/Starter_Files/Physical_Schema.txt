@@ -2,18 +2,18 @@
 
 Categories
 -
-category_id INT PK 
+category_id VARCHAR (30) PK 
 category VARCHAR(30)
 
 Subcategories
 -
-subcategory_id INT PK 
+subcategory_id VARCHAR (30) PK 
 subcategory VARCHAR(30)
 
 Campaign
 -
-cf_id INT PK
-contact_id INT
+cf_id INT 
+contact_id INT PK
 company_name VARCHAR(30)
 description VARCHAR(30)
 goal INT
@@ -24,8 +24,8 @@ country VARCHAR(30)
 currency VARCHAR(30)
 launched_date DATE
 end_date DATE
-category_id INT FK - Categories.category_id
-subcategory_id INT FK - Subcategories.subcategory_id
+category_id INT FK >0- Categories.category_id
+subcategory_id INT FK >0- Subcategories.subcategory_id
 
 Contacts
 -
